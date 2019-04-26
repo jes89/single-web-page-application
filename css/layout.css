@@ -1,0 +1,858 @@
+﻿@charset "UTF-8";
+/*----------------- ��� -----------------*/
+
+.container {
+    width : 100%
+}
+.container img {
+    width : 100%
+}
+.header .header-top {
+  padding: 3.5vw 17px 3.35vw;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .header .header-top .gnb-all-btn {
+    width: 31px;
+    height: 29px;
+    margin-left: -4px;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .header .header-top .gnb-all-btn img {
+      display: block;
+      width: 23px; }
+  .header .header-top .logo {
+    padding: 0 0 0 0; }
+    .header .header-top .logo img {
+      display: block;
+      width: 36.7vw; }
+  .header .header-top .search img {
+    display: block;
+    width: 23px; }
+
+.header .header-bottom {
+  padding: 0 19px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-top: 1px solid #ccc; }
+  .header .header-bottom .gnb-main ul {
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: space-between; }
+    .header .header-bottom .gnb-main ul li a {
+      display: table-cell;
+      height: 11.1vw;
+      padding-top: 1px;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      font-size: 15px;
+      font-weight: 500;
+      color: #222;
+      line-height: 15px;
+      letter-spacing: -1px;
+      vertical-align: middle; }
+    .header .header-bottom .gnb-main ul li.active {
+      /*
+            &::after{  
+              @include bfaf($b: 0, $l: -10%, $width: 120%, $height: 2px, $color: #0e59ba);
+            }
+            */ }
+      .header .header-bottom .gnb-main ul li.active a {
+        font-weight: 700;
+        color: #0e59ba; }
+
+.header .dim {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10; }
+
+.header .gnb-all-wrap {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  padding-right: 15px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  left: -100%;
+  top: 0;
+  overflow: auto;
+  z-index: 11; }
+  .header .gnb-all-wrap.active {
+    left: 0; }
+  .header .gnb-all-wrap .gnb-all-inner {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    background: #fff;
+    overflow: hidden; }
+    .header .gnb-all-wrap .gnb-all-inner .info {
+      position: relative;
+      width: 100%;
+      padding: 20px;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      overflow: hidden;
+      background: #1962c2; }
+      .header .gnb-all-wrap .gnb-all-inner .info .close {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        width: 23px;
+        height: 23px;
+        background: url(http://www.changetv.kr/images/LPTV_2018/mobile/common/btn_header_gnb_all_close.png) no-repeat;
+        background-size: 23px 23px; }
+      .header .gnb-all-wrap .gnb-all-inner .info .user-thumb {
+        float: left;
+        width: 24.3%; }
+        .header .gnb-all-wrap .gnb-all-inner .info .user-thumb img {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%; }
+      .header .gnb-all-wrap .gnb-all-inner .info .log-info {
+        float: right;
+        width: 75.6%;
+        font-size: 0; }
+        .header .gnb-all-wrap .gnb-all-inner .info .log-info h3 {
+          padding-bottom: 9px;
+          margin-bottom: 7px;
+          font-size: 17px;
+          font-weight: 500;
+          color: #fff;
+          line-height: 17px;
+          letter-spacing: -0.7px;
+          border-bottom: 1px solid #638ed1; }
+        .header .gnb-all-wrap .gnb-all-inner .info .log-info p {
+          font-size: 12px;
+          color: #fff;
+          line-height: 16px;
+          letter-spacing: -0.5px; }
+          .header .gnb-all-wrap .gnb-all-inner .info .log-info p span {
+            color: #bbd9ff; }
+        .header .gnb-all-wrap .gnb-all-inner .info .log-info a {
+          display: inline-block;
+          padding: 10px 0;
+          margin: 9px 4px 0 0;
+          font-size: 13px;
+          color: #173863;
+          line-height: 13px;
+          letter-spacing: -0.7px;
+          text-align: center;
+          border-radius: 3px; }
+          .header .gnb-all-wrap .gnb-all-inner .info .log-info a.btn-login {
+            width: 105px;
+            background: #65e0f3; }
+          .header .gnb-all-wrap .gnb-all-inner .info .log-info a.btn-join {
+            width: 105px;
+            padding-left: 14px;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            background: #6ecaff url(http://www.changetv.kr/images/LPTV_2018/mobile/common/icon_gnb_all_join.png) no-repeat;
+            background-size: auto 12px;
+            background-position: 23px center; }
+          .header .gnb-all-wrap .gnb-all-inner .info .log-info a.btn-member {
+            width: 95px;
+            background: #65e0f3; }
+          .header .gnb-all-wrap .gnb-all-inner .info .log-info a.btn-buy {
+            width: 130px;
+            margin-right: 0;
+            background: #6ecaff; }
+    .header .gnb-all-wrap .gnb-all-inner .gnb-all {
+      padding: 9px 20px; }
+      .header .gnb-all-wrap .gnb-all-inner .gnb-all > ul > li {
+        padding: 16px 0 16px 10px;
+        font-size: 16px;
+        font-weight: 500;
+        color: #222;
+        line-height: 16px;
+        letter-spacing: -0.5px;
+        border-bottom: 1px solid #ddd; }
+        .header .gnb-all-wrap .gnb-all-inner .gnb-all > ul > li > a {
+          display: inline-block;
+          position: relative;
+          width: 100%;
+          color: #222; }
+        .header .gnb-all-wrap .gnb-all-inner .gnb-all > ul > li.gnb-all-program > a, .header .gnb-all-wrap .gnb-all-inner .gnb-all > ul > li.gnb-all-mypage > a {
+          background: url("http://www.changetv.kr/images/LPTV_2018/mobile/common/arr_header_gnb_all_program_menu.png") no-repeat;
+          background-size: 17px;
+          background-position: right 10px center; }
+        .header .gnb-all-wrap .gnb-all-inner .gnb-all > ul > li.gnb-all-program.active > a, .header .gnb-all-wrap .gnb-all-inner .gnb-all > ul > li.gnb-all-mypage.active > a {
+          font-weight: 700;
+          color: #0e59ba;
+          background: url("http://www.changetv.kr/images/LPTV_2018/mobile/common/arr_header_gnb_all_program_menu_active.png") no-repeat;
+          background-size: 17px;
+          background-position: right 10px center; }
+        .header .gnb-all-wrap .gnb-all-inner .gnb-all > ul > li.gnb-all-program-menu {
+          display: none;
+          padding: 1px 0 0 0;
+          margin: -1px -23px 0 -23px;
+          border-bottom: 0;
+          background: #eee; }
+          .header .gnb-all-wrap .gnb-all-inner .gnb-all > ul > li.gnb-all-program-menu ul {
+            padding: 7px 10px 4px 23px;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            font-size: 0;
+            overflow: hidden; }
+            .header .gnb-all-wrap .gnb-all-inner .gnb-all > ul > li.gnb-all-program-menu ul li {
+              float: left;
+              margin-bottom: 4px;
+              margin-right: 5px; }
+              .header .gnb-all-wrap .gnb-all-inner .gnb-all > ul > li.gnb-all-program-menu ul li a {
+                display: table-cell;
+                height: 32px;
+                padding: 0 14px;
+                box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                font-size: 14px;
+                font-weight: 400;
+                color: #333;
+                line-height: 14px;
+                letter-spacing: -1px;
+                vertical-align: middle;
+                background: #fff;
+                border: 1px solid #ccc;
+                border-radius: 25px; }
+        .header .gnb-all-wrap .gnb-all-inner .gnb-all > ul > li.gnb-all-mypage-menu {
+          display: none;
+          position: relative;
+          padding: 1px 0 0 0;
+          margin-top: -1px;
+          border-bottom: 0;
+          background: #eee; }
+          .header .gnb-all-wrap .gnb-all-inner .gnb-all > ul > li.gnb-all-mypage-menu::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: #eee; }
+          .header .gnb-all-wrap .gnb-all-inner .gnb-all > ul > li.gnb-all-mypage-menu::after {
+            position: absolute;
+            content: "";
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100%;
+            background: #eee; }
+          .header .gnb-all-wrap .gnb-all-inner .gnb-all > ul > li.gnb-all-mypage-menu ul {
+            padding: 15px 10px;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            flex-wrap: wrap; }
+            .header .gnb-all-wrap .gnb-all-inner .gnb-all > ul > li.gnb-all-mypage-menu ul li {
+              width: 50%;
+              padding: 10px 0 10px 28px;
+              box-sizing: border-box;
+              -webkit-box-sizing: border-box;
+              font-size: 15px;
+              font-weight: 400;
+              line-height: 15px;
+              letter-spacing: -0.5px; }
+              .header .gnb-all-wrap .gnb-all-inner .gnb-all > ul > li.gnb-all-mypage-menu ul li a {
+                color: #333; }
+              .header .gnb-all-wrap .gnb-all-inner .gnb-all > ul > li.gnb-all-mypage-menu ul li.history {
+                background: url("http://www.changetv.kr/images/LPTV_2018/mobile/common/icon_gnb_all_mypage_history.png") no-repeat;
+                background-size: 20px;
+                background-position: 0 center; }
+              .header .gnb-all-wrap .gnb-all-inner .gnb-all > ul > li.gnb-all-mypage-menu ul li.point {
+                background: url("http://www.changetv.kr/images/LPTV_2018/mobile/common/icon_gnb_all_mypage_point.png") no-repeat;
+                background-size: 20px;
+                background-position: 0 center; }
+              .header .gnb-all-wrap .gnb-all-inner .gnb-all > ul > li.gnb-all-mypage-menu ul li.latest-view {
+                background: url("http://www.changetv.kr/images/LPTV_2018/mobile/common/icon_gnb_all_mypage_latest_view.png") no-repeat;
+                background-size: 20px;
+                background-position: 0 center; }
+              .header .gnb-all-wrap .gnb-all-inner .gnb-all > ul > li.gnb-all-mypage-menu ul li.bookmark {
+                background: url("http://www.changetv.kr/images/LPTV_2018/mobile/common/icon_gnb_all_mypage_bookmark.png") no-repeat;
+                background-size: 20px;
+                background-position: 0 center; }
+              .header .gnb-all-wrap .gnb-all-inner .gnb-all > ul > li.gnb-all-mypage-menu ul li.coupon {
+                background: url("http://www.changetv.kr/images/LPTV_2018/mobile/common/icon_gnb_all_mypage_coupon.png") no-repeat;
+                background-size: 20px;
+                background-position: 0 center; }
+              .header .gnb-all-wrap .gnb-all-inner .gnb-all > ul > li.gnb-all-mypage-menu ul li.app {
+                background: url("http://www.changetv.kr/images/LPTV_2018/mobile/common/icon_gnb_all_mypage_app.png") no-repeat;
+                background-size: 20px;
+                background-position: 0 center; }
+    .header .gnb-all-wrap .gnb-all-inner .guide-link {
+      position: relative;
+      padding: 16px 18px 35px 25px; }
+      .header .gnb-all-wrap .gnb-all-inner .guide-link.active {
+        padding-bottom: 180px; }
+      .header .gnb-all-wrap .gnb-all-inner .guide-link > ul {
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        flex-wrap: nowrap; }
+        .header .gnb-all-wrap .gnb-all-inner .guide-link > ul > li {
+          width: 25%;
+          font-size: 14px;
+          font-weight: 500;
+          line-height: 14px;
+          letter-spacing: -0.5px; }
+          .header .gnb-all-wrap .gnb-all-inner .guide-link > ul > li > a {
+            display: inline-block;
+            width: 100%;
+            padding-top: 68px;
+            color: #222;
+            text-align: center; }
+          .header .gnb-all-wrap .gnb-all-inner .guide-link > ul > li.notice-event > a {
+            background: url(http://www.changetv.kr/images/LPTV_2018/mobile/common/icon_gnb_all_guide_link_notice_event.png) no-repeat;
+            background-size: 60px 60px;
+            background-position: center 0; }
+          .header .gnb-all-wrap .gnb-all-inner .guide-link > ul > li.customer > a {
+            background: url(http://www.changetv.kr/images/LPTV_2018/mobile/common/icon_gnb_all_guide_link_customer.png) no-repeat;
+            background-size: 60px 60px;
+            background-position: center 0; }
+          .header .gnb-all-wrap .gnb-all-inner .guide-link > ul > li.guide > a {
+            background: url(http://www.changetv.kr/images/LPTV_2018/mobile/common/icon_gnb_all_guide_link_guide.png) no-repeat;
+            background-size: 60px 60px;
+            background-position: center 0; }
+          .header .gnb-all-wrap .gnb-all-inner .guide-link > ul > li.channel > a {
+            background: url(http://www.changetv.kr/images/LPTV_2018/mobile/common/icon_gnb_all_guide_link_channel.png) no-repeat;
+            background-size: 60px 60px;
+            background-position: center 0; }
+          .header .gnb-all-wrap .gnb-all-inner .guide-link > ul > li.channel.active > a {
+            background: url(http://www.changetv.kr/images/LPTV_2018/mobile/common/icon_gnb_all_guide_link_channel_active.png) no-repeat;
+            background-size: 60px 60px;
+            background-position: center 0; }
+          .header .gnb-all-wrap .gnb-all-inner .guide-link > ul > li.channel.active ul {
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap; }
+          .header .gnb-all-wrap .gnb-all-inner .guide-link > ul > li.channel ul {
+            display: none;
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            padding: 11px 18px;
+            margin: 0 20px;
+            background: #eee;
+            border-radius: 5px; }
+            .header .gnb-all-wrap .gnb-all-inner .guide-link > ul > li.channel ul::before {
+              position: absolute;
+              content: "";
+              top: -8px;
+              right: 34px;
+              width: 10px;
+              height: 8px;
+              background: url("http://www.changetv.kr/images/LPTV_2018/mobile/common/dot_gnb_all_guide_link_channel.png") no-repeat;
+              background-size: 19px;
+              background-position: center 0; }
+            .header .gnb-all-wrap .gnb-all-inner .guide-link > ul > li.channel ul li {
+              width: 50%;
+              margin: 4px 0;
+              box-sizing: border-box;
+              -webkit-box-sizing: border-box; }
+              .header .gnb-all-wrap .gnb-all-inner .guide-link > ul > li.channel ul li:nth-child(even) {
+                padding-left: 3%; }
+              .header .gnb-all-wrap .gnb-all-inner .guide-link > ul > li.channel ul li a {
+                display: table-cell;
+                height: 32px;
+                padding-left: 42px;
+                font-size: 14px;
+                font-weight: 400;
+                color: #333;
+                line-height: 14px;
+                letter-spacing: -0.5px;
+                vertical-align: middle; }
+              .header .gnb-all-wrap .gnb-all-inner .guide-link > ul > li.channel ul li.youtube a {
+                background: url(http://www.changetv.kr/images/LPTV_2018/mobile/common/icon_gnb_all_guide_link_channel_youtube.png) no-repeat;
+                background-size: 31px;
+                background-position: 0 center; }
+              .header .gnb-all-wrap .gnb-all-inner .guide-link > ul > li.channel ul li.story a {
+                background: url(http://www.changetv.kr/images/LPTV_2018/mobile/common/icon_gnb_all_guide_link_channel_story.png) no-repeat;
+                background-size: 31px;
+                background-position: 0 center; }
+              .header .gnb-all-wrap .gnb-all-inner .guide-link > ul > li.channel ul li.yellow a {
+                background: url(http://www.changetv.kr/images/LPTV_2018/mobile/common/icon_gnb_all_guide_link_channel_yellow.png) no-repeat;
+                background-size: 31px;
+                background-position: 0 center; }
+              .header .gnb-all-wrap .gnb-all-inner .guide-link > ul > li.channel ul li.blog a {
+                background: url(http://www.changetv.kr/images/LPTV_2018/mobile/common/icon_gnb_all_guide_link_channel_blog.png) no-repeat;
+                background-size: 31px;
+                background-position: 0 center; }
+              .header .gnb-all-wrap .gnb-all-inner .guide-link > ul > li.channel ul li.change a {
+                background: url(http://www.changetv.kr/images/LPTV_2018/mobile/common/icon_gnb_all_guide_link_channel_change.png) no-repeat;
+                background-size: 31px;
+                background-position: 0 center; }
+              .header .gnb-all-wrap .gnb-all-inner .guide-link > ul > li.channel ul li.gtalk a {
+                background: url(http://www.changetv.kr/images/LPTV_2018/mobile/common/icon_gnb_all_guide_link_channel_gtalk.png) no-repeat;
+                background-size: 31px;
+                background-position: 0 center; }
+
+.header .search-wrap {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  top: 0;
+  left: -100%;
+  background: #f2f2f2;
+  overflow: auto;
+  z-index: 11; }
+  .header .search-wrap.active {
+    left: 0; }
+  .header .search-wrap .top {
+    height: 15vw;
+    padding: 4.52vw;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    background: #2977dc; }
+    .header .search-wrap .top img {
+      width: 22px; }
+    .header .search-wrap .top input {
+      width: 90%;
+      padding: 0;
+      margin-left: 13px;
+      font-family: "Noto Sans KR";
+      font-size: 21px;
+      font-weight: 300;
+      color: #fff;
+      letter-spacing: -0.5px;
+      background: none;
+      border: none; }
+      .header .search-wrap .top input::-webkit-input-placeholder {
+        color: #c6d6f3;
+        opacity: 1; }
+      .header .search-wrap .top input:-ms-input-placeholder {
+        color: #c6d6f3;
+        opacity: 1; }
+      .header .search-wrap .top input::placeholder {
+        color: #c6d6f3;
+        opacity: 1; }
+      .header .search-wrap .top input:-ms-input-placeholder {
+        color: #c6d6f3; }
+      .header .search-wrap .top input::-ms-input-placeholder {
+        color: #c6d6f3; }
+      .header .search-wrap .top input:focus::-webkit-input-placeholder {
+        color: transparent;
+        opacity: 1; }
+      .header .search-wrap .top input:focus:-ms-input-placeholder {
+        color: transparent;
+        opacity: 1; }
+      .header .search-wrap .top input:focus::placeholder {
+        color: transparent;
+        opacity: 1; }
+      .header .search-wrap .top input:focus:-ms-input-placeholder {
+        color: transparent; }
+      .header .search-wrap .top input:focus::-ms-input-placeholder {
+        color: transparent; }
+  .header .search-wrap .middle {
+    padding: 22px 17px 9px 17px;
+    margin-top: 7px;
+    background: #fff;
+    border-bottom: 1px solid #e0e0e0; }
+    .header .search-wrap .middle .wrap {
+      padding-bottom: 12px;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #ddd; }
+      .header .search-wrap .middle .wrap .tit {
+        font-size: 16px;
+        font-weight: 500;
+        color: #2977dc;
+        line-height: 16px;
+        letter-spacing: -0.5px; }
+      .header .search-wrap .middle .wrap .auto-save span {
+        display: table-cell;
+        height: 17px;
+        padding-right: 4px;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        font-size: 14px;
+        color: #888;
+        line-height: 14px;
+        letter-spacing: -0.5px;
+        border-radius: 10px;
+        vertical-align: middle;
+        text-transform: uppercase; }
+        .header .search-wrap .middle .wrap .auto-save span.on {
+          width: 27px;
+          padding: 1px 1px 1px 0;
+          font-size: 10px;
+          font-weight: 700;
+          color: #2977dc;
+          line-height: 10px;
+          border: 1px solid #2977dc;
+          text-align: center; }
+        .header .search-wrap .middle .wrap .auto-save span.off {
+          width: 29px;
+          padding: 1px 1px 1px 0;
+          font-size: 10px;
+          font-weight: 700;
+          color: #888;
+          line-height: 10px;
+          border: 1px solid #aaa;
+          text-align: center; }
+    .header .search-wrap .middle ul {
+      padding: 7px 0; }
+      .header .search-wrap .middle ul li {
+        padding: 11px 0;
+        font-size: 15px;
+        line-height: 16px;
+        letter-spacing: -0.5px;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        .header .search-wrap .middle ul li .word {
+          width: 85%; }
+          .header .search-wrap .middle ul li .word a {
+            display: inline-block;
+            width: 100%;
+            color: #333; }
+        .header .search-wrap .middle ul li span.date {
+          font-size: 12px;
+          color: #b6b6b6;
+          line-height: 12px; }
+    .header .search-wrap .middle .img {
+      text-align: center; }
+      .header .search-wrap .middle .img img {
+        width: 50.6vw;
+        padding: 50px 0; }
+  .header .search-wrap .bottom {
+    padding: 15px;
+    text-align: center; }
+    .header .search-wrap .bottom .btn-delete {
+      padding-right: 17px;
+      font-size: 14px;
+      color: #888;
+      line-height: 14px;
+      letter-spacing: -0.5px;
+      background: url(http://www.changetv.kr/images/LPTV_2018/mobile/common/icon_header_search_wrap_delete.png) no-repeat;
+      background-size: 12px;
+      background-position: right 0; }
+
+/*------------- ���α׷� �޴� -------------*/
+.program-menu {
+  position: relative;
+  height: 53px;
+  padding: 9px 17px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-size: 0;
+  transition: all 0.5;
+  background: #eeeeee;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  overflow: hidden; }
+  .program-menu.active {
+    height: auto;
+    padding-bottom: 5px; }
+    .program-menu.active ul li {
+      margin: 0 4px 4px 0; }
+      .program-menu.active ul li:last-child {
+        margin-right: 0; }
+  .program-menu .btn-active {
+    position: absolute;
+    top: 9px;
+    right: 17px;
+    width: 50px;
+    height: 32px;
+    background: url(http://www.changetv.kr/images/LPTV_2018/mobile/common/arr_program_menu.png) no-repeat;
+    background-size: 50px; }
+    .program-menu .btn-active.active {
+      background: url(http://www.changetv.kr/images/LPTV_2018/mobile/common/arr_program_menu_active.png) no-repeat;
+      background-size: 50px; }
+  .program-menu ul {
+    padding-right: 20px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; }
+    .program-menu ul li {
+      margin: 0 4px 10px 0; }
+      .program-menu ul li a {
+        display: table-cell;
+        height: 32px;
+        padding: 0 14px;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        font-size: 14px;
+        color: #333;
+        line-height: 14px;
+        letter-spacing: -1px;
+        vertical-align: middle;
+        background: #fff;
+        border: 1px solid #ccc;
+        border-radius: 25px; }
+        .program-menu ul li a.tag-free {
+          color: #3e69f6;
+          border: 1px solid #3075cd; }
+        .program-menu ul li a.tag-pay {
+          color: #f6376a;
+          border: 1px solid #f6376a; }
+        .program-menu ul li a.tag-premium {
+          color: #a141fb;
+          border: 1px solid #a141fb; }
+        .program-menu ul li a.tag-igtv {
+          color: #d17012;
+          border: 1px solid #d06e0f; }
+        .program-menu ul li a.active {
+          color: #fff;
+          background: #3075cd;
+          border: 1px solid #3075cd; }
+          .program-menu ul li a.active.tag-free {
+            color: #fff;
+            background: #3075cd;
+            border: 1px solid #3075cd; }
+          .program-menu ul li a.active.tag-pay {
+            color: #fff;
+            background: #f6376a;
+            border: 1px solid #f6376a; }
+          .program-menu ul li a.active.tag-premium {
+            color: #fff;
+            background: #a141fb;
+            border: 1px solid #a141fb; }
+          .program-menu ul li a.active.tag-igtv {
+            color: #fff;
+            background: #c8a073;
+            border: 1px solid #c8a073; }
+
+/*---------------- ������ ----------------*/
+.btn-go-top {
+  display: none;
+  position: fixed;
+  bottom: 5vw;
+  right: 1vw;
+  z-index: 11; }
+  .btn-go-top img {
+    width: 14vw; }
+
+/*----------------- Ǫ�� -----------------*/
+.footer {
+  padding: 21px 17px 30px 17px;
+  background: #eee; }
+  .footer .log-menu ul {
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 0; }
+    .footer .log-menu ul li {
+      margin: 0 2px;
+      font-size: 12px;
+      line-height: 12px;
+      letter-spacing: -0.5px; }
+      .footer .log-menu ul li:first-child {
+        margin-left: 0; }
+      .footer .log-menu ul li:last-child {
+        margin-right: 0; }
+      .footer .log-menu ul li a {
+        display: inline-block;
+        width: 80px;
+        padding: 8px 0;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        color: #666;
+        border: 1px solid #bbbbbb;
+        border-radius: 3px; }
+      .footer .log-menu ul li.login a {
+        background: #fff; }
+      .footer .log-menu ul li.join a {
+        padding-left: 13px;
+        background: #fff url(http://www.changetv.kr/images/LPTV_2018/mobile/common/icon_footer_join.png) no-repeat;
+        background-size: 11px;
+        background-position: 12px center; }
+      .footer .log-menu ul li.customer a {
+        padding-left: 13px;
+        background: #fff url(http://www.changetv.kr/images/LPTV_2018/mobile/common/icon_footer_customer.png) no-repeat;
+        background-size: 11px;
+        background-position: 12px center; }
+      .footer .log-menu ul li.pcver a {
+        padding-left: 13px;
+        background: #fff url(http://www.changetv.kr/images/LPTV_2018/mobile/common/icon_footer_pcver.png) no-repeat;
+        background-size: 11px;
+        background-position: 15px center; }
+  .footer .fnb ul {
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center; }
+    .footer .fnb ul li {
+      position: relative;
+      padding: 0 8px;
+      margin: 15px 0;
+      font-size: 12px;
+      line-height: 12px;
+      letter-spacing: -0.5px; }
+      .footer .fnb ul li::after {
+        position: absolute;
+        content: "";
+        top: 1px;
+        right: -1px;
+        width: 1px;
+        height: 11px;
+        background: #cacaca; }
+      .footer .fnb ul li:last-child::after {
+        display: none; }
+      .footer .fnb ul li a {
+        color: #666; }
+      .footer .fnb ul li.privacy a {
+        color: #1259b7; }
+  .footer .info {
+    padding-top: 16px;
+    font-size: 11px;
+    color: #888;
+    line-height: 11px;
+    letter-spacing: -0.5px;
+    border-top: 1px solid #cacaca;
+    text-align: center; }
+
+/************* �ػ� 360 ���� ************/
+@media all and (max-width: 359px) {
+  /*** ��� ***/
+  .header .header-bottom .gnb-main ul li a {
+    font-size: 14px; }
+  .header .gnb-all-wrap .gnb-all-inner .info .log-info h3 {
+    font-size: 16px;
+    line-height: 16px; }
+  .header .gnb-all-wrap .gnb-all-inner .info .log-info p {
+    font-size: 11px;
+    line-height: 15px; }
+  .header .gnb-all-wrap .gnb-all-inner .info .log-info a.btn-login {
+    width: 100px; }
+  .header .gnb-all-wrap .gnb-all-inner .info .log-info a.btn-join {
+    width: 100px;
+    background-position: 21px center; }
+  .header .gnb-all-wrap .gnb-all-inner .info .log-info a.btn-member {
+    width: 90px; }
+  .header .gnb-all-wrap .gnb-all-inner .info .log-info a.btn-buy {
+    width: 125px; }
+  .header .gnb-all-wrap .gnb-all-inner .gnb-all > ul > li {
+    font-size: 14px;
+    line-height: 14px;
+    padding: 14px 0 14px 10px; }
+  .header .gnb-all-wrap .gnb-all-inner .gnb-all > ul > li.gnb-all-program-menu ul li {
+    margin-right: 4px;
+    margin-bottom: 3px; }
+  .header .gnb-all-wrap .gnb-all-inner .gnb-all > ul > li.gnb-all-program-menu ul li a {
+    font-size: 12px;
+    padding: 0 12px; }
+  .header .gnb-all-wrap .gnb-all-inner .guide-link > ul > li {
+    font-size: 13px;
+    line-height: 13px;
+    letter-spacing: -1px; }
+  .header .gnb-all-wrap .gnb-all-inner .gnb-all > ul > li.gnb-all-mypage-menu ul li {
+    font-size: 13px;
+    line-height: 13px;
+    padding: 8px 0 8px 28px; }
+  .header .gnb-all-wrap .gnb-all-inner .guide-link > ul > li.channel ul li a {
+    font-size: 12px;
+    line-height: 12px;
+    padding-left: 38px; }
+  /*** Ǫ�� ***/
+  .footer {
+    padding: 19px 15px 28px 15px; }
+  .footer .log-menu ul li {
+    font-size: 11px;
+    line-height: 11px; }
+  .footer .log-menu ul li a {
+    width: 70px; }
+  .footer .log-menu ul li.join a {
+    background-position: 10px center; }
+  .footer .log-menu ul li.customer a {
+    background-position: 10px center; }
+  .footer .log-menu ul li.pcver a {
+    background-position: 13px center; }
+  .footer .fnb ul li {
+    font-size: 11px;
+    line-height: 11px;
+    margin: 13px 0; }
+  .footer .info {
+    letter-spacing: -0.7px;
+    padding-top: 14px; }
+  /*** ���α׷� �޴� ***/
+  .program-menu ul li a {
+    font-size: 13px; }
+  .program-menu ul li {
+    margin: 0 2px 10px 0; }
+  .program-menu.active ul li {
+    margin: 0 2px 2px 0; } }
+
+/**************** Safari ****************/
+.safari .header .header-bottom .gnb-main ul li a {
+  padding-top: 0; }
+
+.safari .header .gnb-all-wrap .gnb-all-inner .gnb-all > ul > li.gnb-all-program-menu ul li a {
+  height: 33px;
+  padding-bottom: 1px; }
+
+.safari .program-menu ul li a {
+  height: 33px;
+  padding-bottom: 1px; }
+
+.safari .header .search-wrap .middle .wrap .auto-save span.on {
+  padding-top: 0; }
+
+.safari .header .search-wrap .middle .wrap .auto-save span.off {
+  padding-top: 0; }
+
+.safari .footer .fnb ul li::after {
+  top: 1px; }
